@@ -1,0 +1,38 @@
+requirements: 
+must use at least 2 apis
+must use ajax to pull data
+must use at least one new library ot technology that we havent discussed
+must have a polished front-end/ ui
+must meet good quality coding standards (indentation, scoping, naming)
+must not use alerts, confirms, or prompts
+must have some sort of repeating element (table, columns, etc)
+must use bootstrap or alternative css framework
+must be DEPLOYED
+must have user input validation
+
+Nice to have's:
+utilize firebase for persistent data storage 
+mobile responsive
+use an alternative css framework like Materialize.
+
+(FORMAL) presentation:
+detial: 
+overall application's concept
+motivation for it's development
+design process
+technologies you used (and how they work)
+a demonstration of it's functionality
+directions for future development
+TREAT IT SERIOUSLY
+TALKING INTELLIGENTLY ABOUT TECH > DOING TECH SOMETIMES
+
+conceptDESIGN
+FUNCTIONALITY
+COLLABORATION
+PRESENTATION
+
+Try to stick to apis that do all of the following:
+Allows CORS
+simple or no authentication
+JSON response returned
+Well documented.
