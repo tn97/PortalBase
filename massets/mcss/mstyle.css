@@ -1,5 +1,6 @@
 body {
     font-family: 'Catamaran', sans-serif;
+
 }
 
 #navcontainer{
@@ -39,12 +40,11 @@ body {
     background-position: center;
     border-radius: 50%;
 
-
     display: block;
     width: 90px;
     height: 90px;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-left:10px;
 
 }
 
@@ -54,7 +54,7 @@ body {
     border-radius: 50%;
     top: 10px;
     bottom: 0;
-    left: 30px;
+    left: 25px;
     right: 0;
     height: 90px;
     width: 90px;
@@ -80,6 +80,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     font-family: 'Catamaran', sans-serif;
     text-decoration:none;
+    
  
 }
 .text:link{
@@ -90,3 +91,63 @@ body {
     text-decoration:none;
     color: #f2f2f2;
 }
+
+.invert{
+    -webkit-filter: invert(100%);
+}
+
+i{
+    display: block;
+   font-size:85px;
+   margin-top: 20px;
+   margin-left: 38px;
+   border-radius: 50%;
+   
+}
+
+.overlay2 {
+    position: absolute;
+    border-radius: 50%;
+    top: 118px;
+    bottom: 0;
+    left: 25px;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+    
+  }
+  
+  .container2:hover .overlay2 {
+    opacity: 1;
+    border-radius: 20%;
+  }
+
+  #calculator{
+    font-size:75px;
+    margin-top: 25px;
+    margin-left: 37px;
+}
+
+.overlay3 {
+    position: absolute;
+    border-radius: 50%;
+    top: 220px;
+    bottom: 0;
+    left: 25px;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+  }
+  
+  .container3:hover .overlay3 {
+    opacity: 1;
+    border-radius: 20%;
+  }
