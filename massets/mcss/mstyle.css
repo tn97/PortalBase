@@ -1,0 +1,92 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+#navcontainer{
+    max-width: 100%;
+}
+
+#contentcontainer{
+    max-width: 100%;
+}
+
+#navigationCSS{
+    background: #36393f;
+    color:#f2f2f2;
+}
+
+#mainnavigationCSS{
+    background: #36393f;
+    color:#f2f2f2;
+    border: 2px solid #202225;
+}
+
+#sidebar{
+    background: #202225;
+    height: 700px;
+}
+
+#mainbody{
+    background: #36393f;
+    height: 700px;
+    color:#f2f2f2;
+}
+
+
+.icon {
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+
+
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+
+.overlay {
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    bottom: 0;
+    left: 30px;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+    border-radius: 20%;
+
+  }
+  
+  .text {
+    color: #f2f2f2;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-family: 'Catamaran', sans-serif;
+    text-decoration:none;
+ 
+}
+.text:link{
+    text-decoration:none;
+}
+
+.text:hover{
+    text-decoration:none;
+    color: #f2f2f2;
+}
