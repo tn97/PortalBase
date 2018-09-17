@@ -1,5 +1,5 @@
-// assuming that the container for the html associating with the imported applications will be called id='app-container'
-// for unknown ID's, will put 'UNKNOWN' as a comment, ctrl+f to find and input
+// *TEMPORARY*
+// IDs are subject to change
 
 // Begin jQuery Calc HTML
 $("#btnCalc").on("click", function () {
@@ -26,13 +26,24 @@ $("#test-container").append(newYorkTimes)
 })
 //  End NYTimes HTML
 
+
+$("#btnGiphy").on("click", function () {
+
+  // Clear container
+  $("#CONTAINERGOESHERE").empty();
+
+  var giphy = ("<div class='row'><div id='button-view' class='col-11'></div></div><div class='row'><div id='gif-view' class='col-8 img-fluid'></div><div class='col-4'><form id='animal-form'><label for='animal-input'><strong>Add an animal, Yo!</strong></label><br><input style='width:350px;' type='text' id='animal-input'><br><input style='margin-top: 10px;' id='add-animal' type='submit' value='Submit' class='btn btn-info'><br><input style='margin-top: 10px;' id='load-more' type='submit' value='Load More' class='btn btn-info'></form></div></div><p class='totop'><a href='#top'>Back to top</a></p>")
+  $("#test-container").append(giphy);
+});
+
+
 // appfile1.js
 // appfile2.js
 // appfile3.js
 // appfile4.js
 // callfile.js
 // 
-// appfile1234 $(app-container).empty()
+// appfile1234 $(container).empty()
 // 
 // $(#buttonID).on('click', runFunctionFromAppFile()
 // can call functions from js filed called before itself.
