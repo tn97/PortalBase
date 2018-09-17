@@ -1,0 +1,56 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+#navcontainer{
+    max-width: 100%;
+}
+
+#contentcontainer{
+    max-width: 100%;
+}
+
+#navigationCSS{
+    background: #36393f;
+    color:#f2f2f2;
+}
+
+#mainnavigationCSS{
+    background: #36393f;
+    color:#f2f2f2;
+    border: 2px solid #202225;
+}
+
+#sidebar{
+    background: #202225;
+    height: 700px;
+}
+
+#mainbody{
+    background: #36393f;
+    height: 700px;
+    color:#f2f2f2;
+}
+
+
+.icon {
+    background-image: url('../image/Dlogo.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-clip: border-box;
+    transition: background-size 0.2s;
+    transition-timing-function: cubic-bezier(.07,1.41,.82,1.41);
+
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space:nowrap;
+    margin-left: 9px;
+    margin-top: 10px;
+}
