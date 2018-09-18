@@ -1,65 +1,146 @@
-html, body {
-max-width: 100%;
-overflow-x: hidden;
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
+    body {
+        font-family: 'Catamaran', sans-serif;
+    }
+    
+    #navcontainer{
+        max-width: 100%;
+    }
+
+    
+    #contentcontainer{
+        max-width: 100%;
+    }
+    
+    #navigationCSS{
+        background: #36393f;
+        color:#f2f2f2;
+    }
+    
+    #mainnavigationCSS{
+        background: #36393f;
+        color:#f2f2f2;
+        border: 2px solid #202225;
+    }
+    
+    #sidebar{
+        background: #202225;
+        height: 700px;
+    }
+    
+    #mainbody{
+        background: #36393f;
+        height: 700px;
+        color:#f2f2f2;
+    }
+    
+    
+    #home {
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10%;
+  
+        width: 90px;
+        height: 90px;
+        margin-top: 10px;
+    
+    }
+    
+    .overlay {
+        position: absolute;
+        border-radius: 50%;
+        top: 10px;
+        bottom: 0;
+        left: 30px;
+        right: 0;
+        height: 90px;
+        width: 90px;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #7289da;
+        background-position: center;
+      }
+      
+      .container:hover .overlay {
+        opacity: 1;
+        border-radius: 20%;
+    
+      }
+      
+
+      .text {
+        color: #f2f2f2;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-family: 'Catamaran', sans-serif;
+        text-decoration:none;
+        font-weight: bold;
+    }
+
+    .text:link{
+        text-decoration:none;
+    }
+    
+    .text:hover{
+        text-decoration:none;
+        color: #f2f2f2;
+    }
+
+.invert{
+    -webkit-filter: invert(100%);
 }
 
-body {
-    font-family: 'Catamaran', sans-serif;
-}
-
-#navcontainer{
-    max-width: 100%;
-}
-
-#contentcontainer{
-    max-width: 100%;
-}
-
-#navigationCSS{
-    background: #36393f;
-    color:#f2f2f2;
-}
-
-#mainnavigationCSS{
-    background: #36393f;
-    color:#f2f2f2;
-    border: 2px solid #202225;
-}
-
-#sidebar{
-    background: #202225;
-    height: 700px;
-}
-
-#mainbody{
-    background: #36393f;
-    height: 700px;
-    color:#f2f2f2;
-}
-
-
-.icon {
-    background-size: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-
-
+#notePad{
     display: block;
-    width: 90px;
-    height: 90px;
-    margin-top: 10px;
-    margin-right: 10px;
-
+   font-size:85px;
+   margin-top: 20px;
+   margin-left: 38px;
+   border-radius: 100%;
+   
 }
 
-
-.overlay {
+.overlay2 {
     position: absolute;
     border-radius: 50%;
-    top: 10px;
+    top: 118px;
     bottom: 0;
-    left: 30px;
+    left: 25px;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+    
+  }
+  
+  .container2:hover .overlay2 {
+    opacity: 1;
+    border-radius: 20%;
+  }
+
+  #calculator{
+    font-size:75px;
+    margin-top: 25px;
+    margin-left: 37px;
+}
+
+.overlay3 {
+    position: absolute;
+    border-radius: 50%;
+    top: 220px;
+    bottom: 0;
+    left: 25px;
     right: 0;
     height: 90px;
     width: 90px;
@@ -69,29 +150,61 @@ body {
     background-position: center;
   }
   
-  .container:hover .overlay {
+  .container3:hover .overlay3 {
     opacity: 1;
     border-radius: 20%;
+  }
 
+  #NYTimes{
+    font-size:73px;
+    margin-top: 25px;
+    margin-left: 37px;
+}
+
+.overlay4 {
+    position: absolute;
+    border-radius: 50%;
+    top: 322px;
+    bottom: 0;
+    left: 25px;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
   }
   
-  .text {
-    color: #f2f2f2;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-family: 'Catamaran', sans-serif;
-    text-decoration:none;
- 
-}
-.text:link{
-    text-decoration:none;
+  .container4:hover .overlay4 {
+    opacity: 1;
+    border-radius: 20%;
+  }
+
+
+  #gify{
+    font-size:80px;
+    margin-top: 25px;
+    margin-left: 39px;
 }
 
-.text:hover{
-    text-decoration:none;
-    color: #f2f2f2;
-}
+.overlay5 {
+    position: absolute;
+    border-radius: 50%;
+    top: 420px;
+    bottom: 0;
+    left: 25px;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+  }
+  
+  .container5:hover .overlay5 {
+    opacity: 1;
+    border-radius: 20%;
+  }
+
