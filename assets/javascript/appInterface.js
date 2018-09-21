@@ -369,7 +369,7 @@ $(document).ready(function () {
       // setting searchValue to the data-name of the button
       searchValue = $(this).attr("data-name");
       console.log(searchValue);
-
+      $(".item").remove();
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchValue + "&api_key=fz8sHcMEzac0L0N2iePYvyFkSb2JcMgc&limit=10";
 
       // inputting our ajax
@@ -425,12 +425,12 @@ $(document).ready(function () {
 
           // Prepending the gifDiv to the #gif-div
           $("#gif-div").prepend(gifDiv);
-          attachListeners()
+          
 
 
         }
 
-
+        attachListeners()
 
       });
       // When clicked, the individual gif will animate
