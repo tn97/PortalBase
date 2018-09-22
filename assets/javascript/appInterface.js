@@ -1,6 +1,22 @@
 // *TEMPORARY*
 // IDs are subject to change
 $(document).ready(function () {
+  // Begin homepage HTML
+
+    // Begin jQuery Calc HTML
+    $(document).on("click", "#btnHome", function () {
+
+      // Clear container
+      $("#appContainer").empty();
+  
+      // importing HTML for Calculator
+      var home = ("<div class='row'><img style='margin-left:auto;margin-right:auto' src='assets/image/bw.jpeg' alt='homepage'class='img-fluid col-12'></div>")
+    
+      $("#appContainer").append(home);
+    })
+
+  // End homepage HTML
+
   // Begin Checklist HTML
 
   $(document).on("click", "#btnChecklist", function () {
@@ -9,7 +25,11 @@ $(document).ready(function () {
     $("#appContainer").empty();
 
     // importing HTML for Calculator
-    var checklist = ("<div class='jumbotron-fluid jumbotron-color'><div class='container'><h1 class='display-4 title-display'> Checklist </h1><p class='lead lead-text'>This is a simple checklist that you'll be able to use on the go. Unfortunately, it  doesn't have cloud storage as of yet, but it does have local!</p></div><form><span id='todo-items'>To Do Items: <input class='form-control' id='to-do' type='text'><input class='btn btn-light' id='add-to-do' value='Add Item' type='submit'></span></form></div><div id='to-dos'></div>")
+    var checklist = ("<div class='row'>"+
+    "<div class='container'><h1 class='display-4 title-display'> Checklist </h1>"+
+    "<p class='lead lead-text'>This is a simple checklist that you'll be able to use on the go. Unfortunately, it  doesn't have cloud storage as of yet, but it does have local!</p>"+
+    "<form><span id='todo-items'>To Do Items: <input class='form-control col-12' id='to-do' type='text'><input style='margin-top:10px;' class='btn btn-light' id='add-to-do' value='Add Item' type='submit'></span></form><br>"+
+    "<div id='to-dos'></div></div></div>")
 
 
     $("#appContainer").append(checklist);
@@ -113,6 +133,7 @@ $(document).ready(function () {
 
     // importing HTML for Calculator
     var calculator = ("<div class='container calcApp'><div class='row'><!-- Calculator Panel --><div class='col-lg-4'><div class='card'><h3 class='card-header'>Calculator</h3><div class='card-body'><button id='button-1' class='btn btn-primary number' value='1'><h1>1</h1></button> <a> </a><button id='button-2' class='btn btn-primary number' value='2'><h1>2</h1></button><a> </a><button id='button-3' class='btn btn-primary number' value='3'><h1>3</h1></button><a> </a><button id='button-plus' class='btn btn-danger operator' value='plus'><h1>+</h1></button><br><br><button id='button-4' class='btn btn-primary number' value='4'><h1>4</h1></button><a> </a><button id='button-5' class='btn btn-primary number' value='5'><h1>5</h1></button><a> </a><button id='button-6' class='btn btn-primary number' value='6'><h1>6</h1></button><a> </a><button id='button-minus' class='btn btn-danger operator' value='minus'><h1>&minus;</h1></button><br><br><button id='button-7' class='btn btn-primary number' value='7'><h1>7</h1></button><a> </a><button id='button-8' class='btn btn-primary number' value='8'><h1>8</h1></button><a> </a><button id='button-9' class='btn btn-primary number' value='9'><h1>9</h1></button><a> </a><button id='button-multiply' class='btn btn-danger operator' value='times'><h1>&times;</h1></button><br><br><button id='button-0' class='btn btn-primary number' value='0'><h1>0</h1></button><a> </a><button id='button-.' class='btn btn-primary number' value='.'><h1>.</h1></button><a> </a><button id='button-divide' class='btn btn-danger operator' value='divide'><h1>&divide;</h1></button><a> </a><button id='button-power' class='btn btn-danger operator' value='power'><h1>^</h1></button><br><br><button id='button-clear' class='btn btn-dark clear' value='clear'><h1>clear</h1></button><a> </a><button id='button-equal' class='btn btn-success equal' value='equals'><h1>=</h1></button></div></div></div><div class='col-lg-6'><div class='card'><h3 class='card-header'>Result</h3><div class='card-body'><h1 id='first-number'></h1><h1 id='operator'></h1><h1 id='second-number'></h1><hr><h1 id='result'></h1></div></div></div></div></div>")
+
 
 
     $("#appContainer").append(calculator);
@@ -233,171 +254,25 @@ $(document).ready(function () {
   $("#btnNYT").on("click", function () {
 
     // Clear container
-    $("#appContainer").empty();
+    $("#appContent").empty();
 
-    var newYorkTimes = ("<div class='container NYTimes'><div class='jumbotron' style='background-color: #20315A ; color: white;'><h1 class='text-center'><strong><i class='fa fa-newspaper-o'></i> New York Times Search</strong></h1></div><div class='row'><div class='col-sm-12'><br><div class='card'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div><div class='card-body'><form role='form'><div class='form-group'><label for='search'>Search Term:</label><input type='text' class='form-control' id='search-term'></div><div class='form-group'><label for='pwd'>Number of Records to Retrieve:</label><select id='article-count' class='custom-select' aria-labelledby='dropdownMenuButton'><option selected value='1'>1</option><option value='5' selected>5</option><option value='10'>10</option></select></div><div class='form-group'><label for='start-year'>Start Year (Optional):</label><input type='text' class='form-control' id='start-year'></div><div class='form-group'><label for='end-year'>End Year (Optional):</label><input type='text' class='form-control' id='end-year'></div><button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i> Search</button><button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear Results</button></form></div></div></div></div><div class='row'><div class='col-sm-12'><br><div class='card'><div class='card-header'><strong><i class='fa fa-table'></i> Top Articles</strong></div><div class='card-body' id='article-section'></div></div></div></div><div class='row'><div class='col-sm-12'><hr><h5 class='text-center'><small>Made with lots and lots of<i class='fa fa-heart'></i></small></h5></div></div></div>")
+    var newYorkTimes = ("<div class='container'><div class='jumbotron' style='background-color: #20315A ; color: white;'><h1 class='text-center'><strong><i class='fa fa-newspaper-o'></i> New York Times Search</strong></h1></div><div class='row'><div class='col-sm-12'><br><div class='card'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div><div class='card-body'><form role='form'><div class='form-group'><label for='search'>Search Term:</label><input type='text' class='form-control' id='search-term'></div><div class='form-group'><label for='pwd'>Number of Records to Retrieve:</label><select id='article-count' class='custom-select' aria-labelledby='dropdownMenuButton'><option selected value='1'>1</option><option value='5' selected>5</option><option value='10'>10</option></select></div><div class='form-group'><label for='start-year'>Start Year (Optional):</label><input type='text' class='form-control' id='start-year'></div><div class='form-group'><label for='end-year'>End Year (Optional):</label><input type='text' class='form-control' id='end-year'></div><button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i> Search</button><button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear Results</button></form></div></div></div></div><div class='row'><div class='col-sm-12'><br><div class='card'><div class='card-header'><strong><i class='fa fa-table'></i> Top Articles</strong></div><div class='card-body' id='article-section'></div></div></div></div><div class='row'><div class='col-sm-12'><hr><h5 class='text-center'><small>Made with lots and lots of<i class='fa fa-heart'></i></small></h5></div></div></div>")
 
-    $("#appContainer").append(newYorkTimes)
-    renderNYTimes();
+    $("#test-container").append(newYorkTimes)
   })
   //  End NYTimes HTML
 
-  // Start NYTimes javaScript
 
-  function renderNYTimes() {
-    function buildQueryURL() {
-      /**
-      * pulls information from the form and build the query URL
-      * @returns {string} URL for NYT API based on form inputs
-      */
-      // queryURL is the url we'll use to query the API
-      var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?";
+  $("#btnGiphy").on("click", function () {
 
-      // Begin building an object to contain our API call's query parameters
-      // Set the API key
-      var queryParams = { "api-key": "b9f91d369ff59547cd47b931d8cbc56b:0:74623931" };
+    // Clear container
+    $("#appContent").empty();
 
-      // Grab text the user typed into the search input, add to the queryParams object
-      queryParams.q = $("#search-term")
-        .val()
-        .trim();
+    var giphy = ("<div class='row'><div id='button-view' class='col-11'></div></div><div class='row'><div id='gif-view' class='col-8 img-fluid'></div><div class='col-4'><form id='animal-form'><label for='animal-input'><strong>Add an animal, Yo!</strong></label><br><input style='width:350px;' type='text' id='animal-input'><br><input style='margin-top: 10px;' id='add-animal' type='submit' value='Submit' class='btn btn-info'><br><input style='margin-top: 10px;' id='load-more' type='submit' value='Load More' class='btn btn-info'></form></div></div><p class='totop'><a href='#top'>Back to top</a></p>")
+    $("#test-container").append(giphy);
+  });
 
-      // If the user provides a startYear, include it in the queryParams object
-      var startYear = $("#start-year")
-        .val()
-        .trim();
-
-      if (parseInt(startYear)) {
-        queryParams.begin_date = startYear + "0101";
-      }
-
-      // If the user provides an endYear, include it in the queryParams object
-      var endYear = $("#end-year")
-        .val()
-        .trim();
-
-      if (parseInt(endYear)) {
-        queryParams.end_date = endYear + "0101";
-      }
-
-      // Logging the URL so we have access to it for troubleshooting
-      console.log("---------------\nURL: " + queryURL + "\n---------------");
-      console.log(queryURL + $.param(queryParams));
-      return queryURL + $.param(queryParams);
-    }
-
-    /**
-     * takes API data (JSON/object) and turns it into elements on the page
-     * @param {object} NYTData - object containing NYT API data
-     */
-    function updatePage(NYTData) {
-      // Get from the form the number of results to display
-      // API doesn't have a "limit" parameter, so we have to do this ourselves
-      var numArticles = $("#article-count").val();
-
-      // Log the NYTData to console, where it will show up as an object
-      console.log(NYTData);
-      console.log("------------------------------------");
-
-      // Loop through and build elements for the defined number of articles
-      for (var i = 0; i < numArticles; i++) {
-        // Get specific article info for current index
-        var article = NYTData.response.docs[i];
-
-        // Increase the articleCount (track article # - starting at 1)
-        var articleCount = i + 1;
-
-        // Create the  list group to contain the articles and add the article content for each
-        var $articleList = $("<ul>");
-        $articleList.addClass("list-group");
-
-        // Add the newly created element to the DOM
-        $("#article-section").append($articleList);
-
-        // If the article has a headline, log and append to $articleList
-        var headline = article.headline;
-        var $articleListItem = $("<li class='list-group-item articleHeadline'>");
-
-        if (headline && headline.main) {
-          console.log(headline.main);
-          $articleListItem.append(
-            "<span class='label label-primary'>" +
-            articleCount +
-            "</span>" +
-            "<strong> " +
-            headline.main +
-            "</strong>"
-          );
-        }
-
-        // If the article has a byline, log and append to $articleList
-        var byline = article.byline;
-
-        if (byline && byline.original) {
-          console.log(byline.original);
-          $articleListItem.append("<h5>" + byline.original + "</h5>");
-        }
-
-        // Log section, and append to document if exists
-        var section = article.section_name;
-        console.log(article.section_name);
-        if (section) {
-          $articleListItem.append("<h5>Section: " + section + "</h5>");
-        }
-
-        // Log published date, and append to document if exists
-        var pubDate = article.pub_date;
-        console.log(article.pub_date);
-        if (pubDate) {
-          $articleListItem.append("<h5>" + article.pub_date + "</h5>");
-        }
-
-        // Append and log url
-        $articleListItem.append("<a href='" + article.web_url + "'>" + article.web_url + "</a>");
-        console.log(article.web_url);
-
-        // Append the article
-        $articleList.append($articleListItem);
-      }
-    }
-
-    // Function to empty out the articles
-    function clear() {
-      $("#article-section").empty();
-    }
-
-    // CLICK HANDLERS
-    // ==========================================================
-
-    // .on("click") function associated with the Search Button
-    $("#run-search").on("click", function (event) {
-      // This line allows us to take advantage of the HTML "submit" property
-      // This way we can hit enter on the keyboard and it registers the search
-      // (in addition to clicks). Prevents the page from reloading on form submit.
-      event.preventDefault();
-
-      // Empty the region associated with the articles
-      clear();
-
-      // Build the query URL for the ajax request to the NYT API
-      var queryURL = buildQueryURL();
-
-      // Make the AJAX request to the API - GETs the JSON data at the queryURL.
-      // The data then gets passed as an argument to the updatePage function
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(updatePage);
-    });
-
-    //  .on("click") function associated with the clear button
-    $("#clear-all").on("click", clear);
-
-  }
-
-  // End NYTimes javaScipt
-
-  // Start HMTL for Giphy
+  // Begin HMTL for Giphy
 
   $(document).on("click", "#btnGiphy", function () {
 
@@ -405,7 +280,12 @@ $(document).ready(function () {
     $("#appContainer").empty();
 
     // importing HTML for Giphy
-    var giphy = ("<div class='container-fluid user-control'><form role='form'><div class='form-group'><label for='search'>Gif Search Term:</label><input type='text' class='form-control' id='search-term-input'></div><button type='submit' class='btn search-btn' id='create-search-btn'>Search</button></form><div class='container btn-container'><button class='btn remove-gif-button' id='clear-gif'>   Clear gifs</button><button class='btn clear-all-btn' id='clear-all'>Clear Everything</button></div></div><div class='row'><div class='col-sm-4'><div class='btn-holder'></div></div></div><div class='row'><div class='container' id='gif-div'></div></div>")
+    var giphy = ("<div class='row'><div class='container-fluid user-control col-6'>" +
+      "<div style='margin-left:50px;font-size:30px;'  class='form-group'><h1 class='display-4 title-display' for='search'>Gif Search Term</h1><input type='text' class='col-12 form-control' id='search-term-input'></div>" +
+      "<button style='margin-left:50px'  type='submit' class='btn search-btn col-3' id='create-search-btn'>Search</button>" +
+      "\xa0\xa0\xa0\xa0\xa0\xa0<button class='btn remove-gif-button container btn-container col-3' id='clear-gif'>Clear gifs</button>\xa0\xa0\xa0\xa0\xa0\xa0<button class='btn clear-all-btn container btn-container col-4' id='clear-all'>Clear Everything</button>" +
+      "<br><br><div class='row'><div class='container' id='gif-div'></div></div></div><div style='margin-top:75px' class='col-6'><div class='btn-holder'></div></div>" +
+      "<a href='#top'><img src='assets/image/top.png' alt='up2top'  style='margin-left:70px;margin-bottom:10px;width:55px;height:55px;border:0;'</a></div>")
 
 
     $("#appContainer").append(giphy);
@@ -471,6 +351,16 @@ $(document).ready(function () {
       usedTopics.push(topics + num);
       topics = [];
       console.log(num);
+
+
+      // create space between buttons  ___ Ying
+      space = $("<span>")
+
+      space
+        .text("\xa0\xa0")
+        .appendTo($(".btn-holder"));
+
+
     };
 
     // this function will display the gifs
@@ -490,6 +380,8 @@ $(document).ready(function () {
         var results = response.data;
         console.log(response);
 
+        // empty gif-div   ___ Ying
+        $("#gif-div").empty();
 
         //looping over each result item
         for (var i = 0; i < results.length; i++) {
@@ -523,8 +415,8 @@ $(document).ready(function () {
             .attr("data-state", "still")
             .attr("src", results[i].images.fixed_height_still.url)
             .attr("data-still", results[i].images.fixed_height_still.url)
-            .attr("data-animate", results[i].images.fixed_height.url);
-
+            .attr("data-animate", results[i].images.fixed_height.url)
+   
 
 
           // Appending the image and then the paragraph to the gifDiv.
@@ -533,9 +425,11 @@ $(document).ready(function () {
 
           // Prepending the gifDiv to the #gif-div
           $("#gif-div").prepend(gifDiv);
-          attachListeners()
+          
+          
         }
-
+        
+        attachListeners()
 
 
       });
