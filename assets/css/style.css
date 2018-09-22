@@ -206,10 +206,12 @@
     margin-left: auto;
 }
 
+
+
 .overlay5 {
     position: absolute;
     border-radius: 50%;
-    top: 420px;
+    top: 422px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -226,29 +228,55 @@
     border-radius: 20%;
   }
 
+
+  #wiki{
+    font-size:70px;
+    margin-top: 25px;
+    margin-left: auto;
+}
+
+  .overlay6 {
+    position: absolute;
+    border-radius: 50%;
+    top: 522px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+  }
+  
+  .container6:hover .overlay6 {
+    opacity: 1;
+    border-radius: 20%;
+  }
+
   .calcApp {
     color: Black;
     margin: 15px;
     padding: 15px;
   }
 
-<<<<<<< HEAD
   .NYTimes {
     color: Black;
     background-color: black;
     margin: 15px;
     padding: 15px;
   }
-=======
-#gif-div {
+
+  .nytFont{
+    color:#36393f;
+    font-family:'Catamaran', sans-serif;
+  }
+
+  .gif{
+      margin-left:50px;
+  }
+
+ #gif-div p{
     margin-left:50px;
-}
-
-li,
-a {
-    cursor: hand;
-    cursor: pointer;
-}
-
-
->>>>>>> cb903ea6f5a65fb80ca2c8860858efbda50ed5d9
+  }
