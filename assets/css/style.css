@@ -232,6 +232,14 @@
     padding: 15px;
   }
 
+<<<<<<< HEAD
+  .NYTimes {
+    color: Black;
+    background-color: black;
+    margin: 15px;
+    padding: 15px;
+  }
+=======
 #gif-div {
     margin-left:50px;
 }
@@ -243,3 +251,4 @@ a {
 }
 
 
+>>>>>>> cb903ea6f5a65fb80ca2c8860858efbda50ed5d9
