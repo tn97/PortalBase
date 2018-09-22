@@ -276,10 +276,10 @@ $(document).ready(function () {
 
       // Begin building an object to contain our API call's query parameters
       // Set the API key
-      var queryParams = { "api-key": "b9f91d369ff59547cd47b931d8cbc56b:0:74623931" };
+      var queryParams = { "api-key": "b9f91d369f59547cd47b931d8cbc56b:0:74623931" };
 
       // Grab text the user typed into the search input, add to the queryParams object
-      queryParams.q = $("#search-term")
+      queryParamsf.q = $("#search-term")
         .val()
         .trim();
 
@@ -612,6 +612,79 @@ $(document).ready(function () {
 
   //End javaScript for Giphy
 
+  
+  // Start HTML for Wikipedia
+  
+  $(document).on("click", "#btnWiki", function () {
+
+    // Clear container
+    $("#appContainer").empty();
+
+    // importing HTML for wikipedia
+    var wiki = ("<main><header class='searchForm-container'><form class='searchForm'><input type='search' class='wikipediaQuery'><button type='submit'> Search </button><a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank' rel='noreferrer' class='icon randomIcon'><img src='https://image.ibb.co/fR5OX5/random.png' alt='Shuffle Icon'></a></form></header>   <section class='searchResults'></section> </main>")
+
+
+    $("#appContainer").append(wiki);
+    renderWiki();
+  })
+  
+  
+  // End HTML for Wikipedia
+
+  // Begin Wiki Java
+
+  function renderGiphy() {
+    function handleSubmit(event) {
+      // prevent page from reloading when form is submitted
+      event.preventDefault();
+      // get the value of the input field
+      const input = document.querySelector(".wikipediaQuery").value;
+      // remove whitespace from the input
+      const searchQuery = input.trim();
+      // call `fetchResults` and pass it the `searchQuery`
+      fetchResults(searchQuery);
+    }
+    
+    function fetchResults(searchQuery) {
+      const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
+      fetch(endpoint)
+        .then(response => response.json())
+        .then(data => {
+          const results = data.query.search;
+          displayResults(results);
+          console.log(results);
+      });
+    }
+    
+    
+    
+    function displayResults(results) {
+      // Store a reference to `.searchResults`
+      const searchResults = document.querySelector(".searchResults");
+      // Remove all child elements
+      searchResults.innerHTML = "";
+      // Loop over results array
+      results.forEach(result => {
+      const url = encodeURI(`https://en.wikipedia.org/wiki/${result.title}`);
+    
+      searchResults.insertAdjacentHTML("beforeend",
+          `<div class="resultItem">
+            <h3 class="resultItem-title">
+              <a href="${url}" target="_blank" rel="noreferrer">${result.title}</a>
+            </h3>
+            <span class="resultItem-snippet">${result.snippet}</span><br>
+            <a href="${url}" class="resultItem-link" target="_blank" rel="noreferrer">${url}</a>
+          </div>`
+        );
+      });
+    }
+    
+    const form = document.querySelector(".searchForm");
+    form.addEventListener("submit", handleSubmit);
+
+  }
+  
+  // End Wiki Java
 
 
   // appfile1.js
