@@ -2,6 +2,12 @@
       max-width: 100%;
       overflow-x: hidden;
     }
+
+    #container-of-boxes {
+        display: table;
+        max-width: 100%;
+        padding-right: 0;
+    }
     
     body {
         font-family: 'Catamaran', sans-serif;
@@ -29,15 +35,25 @@
     
     #sidebar{
         background: #202225;
-        height: 700px;
+        
     }
     
     #mainbody{
         background: #36393f;
-        height: 700px;
         color:#f2f2f2;
+        padding-left:0;
+        padding-right:0;
     }
     
+    #sidebar,
+    #mainbody{
+        min-height: 700px;
+        margin-bottom: 0;
+        display: table-cell;
+        height: auto;
+        overflow: hidden;
+    }
+
     
     #home {
         background-repeat: no-repeat;
@@ -216,9 +232,23 @@
     padding: 15px;
   }
 
+<<<<<<< HEAD
   .NYTimes {
     color: Black;
     background-color: black;
     margin: 15px;
     padding: 15px;
   }
+=======
+#gif-div {
+    margin-left:50px;
+}
+
+li,
+a {
+    cursor: hand;
+    cursor: pointer;
+}
+
+
+>>>>>>> cb903ea6f5a65fb80ca2c8860858efbda50ed5d9

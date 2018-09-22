@@ -263,14 +263,7 @@ $(document).ready(function () {
   //  End NYTimes HTML
 
 
-  $("#btnGiphy").on("click", function () {
 
-    // Clear container
-    $("#appContent").empty();
-
-    var giphy = ("<div class='row'><div id='button-view' class='col-11'></div></div><div class='row'><div id='gif-view' class='col-8 img-fluid'></div><div class='col-4'><form id='animal-form'><label for='animal-input'><strong>Add an animal, Yo!</strong></label><br><input style='width:350px;' type='text' id='animal-input'><br><input style='margin-top: 10px;' id='add-animal' type='submit' value='Submit' class='btn btn-info'><br><input style='margin-top: 10px;' id='load-more' type='submit' value='Load More' class='btn btn-info'></form></div></div><p class='totop'><a href='#top'>Back to top</a></p>")
-    $("#test-container").append(giphy);
-  });
 
   // Begin HMTL for Giphy
 
@@ -283,7 +276,7 @@ $(document).ready(function () {
     var giphy = ("<div class='row'><div class='container-fluid user-control col-6'>" +
       "<div style='margin-left:50px;font-size:30px;'  class='form-group'><h1 class='display-4 title-display' for='search'>Gif Search Term</h1><input type='text' class='col-12 form-control' id='search-term-input'></div>" +
       "<button style='margin-left:50px'  type='submit' class='btn search-btn col-3' id='create-search-btn'>Search</button>" +
-      "\xa0\xa0\xa0\xa0\xa0\xa0<button class='btn remove-gif-button container btn-container col-3' id='clear-gif'>Clear gifs</button>\xa0\xa0\xa0\xa0\xa0\xa0<button class='btn clear-all-btn container btn-container col-4' id='clear-all'>Clear Everything</button>" +
+      "<button class='btn remove-gif-button container btn-container col-3' id='clear-gif'>Clear gifs</button>\xa0\xa0\xa0\xa0\xa0\xa0<button class='btn clear-all-btn container btn-container col-4' id='clear-all'>Clear Everything</button>" +
       "<br><br><div class='row'><div class='container' id='gif-div'></div></div></div><div style='margin-top:75px' class='col-6'><div class='btn-holder'></div></div>" +
       "<a href='#top'><img src='assets/image/top.png' alt='up2top'  style='margin-left:70px;margin-bottom:10px;width:55px;height:55px;border:0;'</a></div>")
 
@@ -433,10 +426,7 @@ $(document).ready(function () {
 
 
       });
-      // When clicked, the individual gif will animate
-
-
-
+      
 
       function attachListeners() {
         $(".gif").on("click", function () {
