@@ -366,10 +366,10 @@ $(document).ready(function () {
 
       // Begin building an object to contain our API call's query parameters
       // Set the API key
-      var queryParams = { "api-key": "b9f91d369f59547cd47b931d8cbc56b:0:74623931" };
+      var queryParams = { "api-key": "2ce783ba77234456b181e10eaa3a822d" };
 
       // Grab text the user typed into the search input, add to the queryParams object
-      queryParamsf.q = $("#search-term")
+      queryParams.q = $("#search-term")
         .val()
         .trim();
 
