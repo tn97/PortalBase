@@ -2,6 +2,18 @@
 // IDs are subject to change
 $(document).ready(function () {
 
+  // Begin Spotify HTML
+  $(document).on("click", "#btnSpotify", function(){
+
+    // Empty Container
+    $("#appContainer").empty();
+
+    // html
+    var spotify = "<button class='btn btn-lg btn-success' id='login-button'>Login</button><div class='container'><div id='profile-info'></div><h3 id='playlists' style='display:none'>Playlists:</h3><h3 id='tracks' style='display:none'>Tracks</h3></div>"
+    
+    $("#appContainer").append(spotify);
+    renderSpotify();
+  })
   //begin search bar
 
   var $component = $('#component1')
@@ -398,10 +410,10 @@ $(document).ready(function () {
 
       // Begin building an object to contain our API call's query parameters
       // Set the API key
-      var queryParams = { "api-key": "b9f91d369f59547cd47b931d8cbc56b:0:74623931" };
+      var queryParams = { "api-key": "2ce783ba77234456b181e10eaa3a822d" };
 
       // Grab text the user typed into the search input, add to the queryParams object
-      queryParamsf.q = $("#search-term")
+      queryParams.q = $("#search-term")
         .val()
         .trim();
 
