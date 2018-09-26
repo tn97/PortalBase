@@ -72,6 +72,7 @@ z-index: 0;
         font-family: 'Catamaran', sans-serif;
     }
     
+       
     #navcontainer{
         max-width: 100%;
     }
@@ -432,7 +433,6 @@ ul{
     outline: none;
     cursor: pointer;
   }
-  
 
   form input[type="search"] {
     text-transform: lowercase;
