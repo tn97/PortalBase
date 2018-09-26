@@ -463,3 +463,9 @@ ul{
       background:  #36393fb0;
       color:#fff;
   }
+
+  .list-group-item{
+      background: #36393fb0;
+      color:#fff;
+      font-family: 'Slabo 27px', serif;
+  }
