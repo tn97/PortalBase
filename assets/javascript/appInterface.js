@@ -7,20 +7,38 @@ $(document).ready(function () {
   var $component = $('#component1')
 
   $component.hide();
-
+  
   $('#s').on('input propertychange', function () {
 
     $component.slideDown("slow");
-
     var content = $(this).val().trim();
-    $component.html("<div class='container'><div class='row'><div style='font-size:70px;color:#36393f;top:30px;font-weight: bold' class='item col-6'>" + content + "</div><div style='margin-right:20px' class='image'><img id='imageCal'style='margin-top:5px;' src='assets/image/" + content + ".png' alt='' onclick='myFunction()'></div></div></div>");
+    $component.html("<div class='container'><div class='row'>"+
+    "<div style='font-size:70px;color:#36393f;top:30px;font-weight: bold' class='item col-6'>" + content + 
+    "</div><div style='margin-right:20px' class='image'><img id='imageSearch'style='margin-top:5px;' src='assets/image/" + content + 
+    ".png' alt='" + content +"'></div></div></div>");
+    
+    $(document).on("click","#imageSearch",function(){
+      switch(content){
+        case 'wiki':
+          wikiPedia();
+          break;
+        case 'giphy':
+          giphy();
+          break;
+        case 'calculator':
+          calculator();
+          break;
+        case 'new york times':
+          newYorkTimes();
+          break;
+        case 'checklist':
+          checklist();
+          break;
+      }
 
-    var BTN1 = document.getElementById('flick');
-    document.getElementById("imageCal").onclick = function myFunction() {
-      BTN1.onclick();
-      // window.location.href="http://www.amazon.com";
-
-    };
+      $(".fa-search-minus").click();
+      
+    })
 
   });
 
@@ -54,7 +72,7 @@ $(document).ready(function () {
   // Begin homepage HTML
 
   // Begin jQuery Calc HTML
-  $(document).on("click", "#btnHome", function () {
+  $(document).on("click", "#btnHome",  function () {
 
     // Clear container
     $("#appContainer").empty();
@@ -67,10 +85,14 @@ $(document).ready(function () {
   })
 
   // End homepage HTML
-
+ 
   // Begin Checklist HTML
 
   $(document).on("click", "#btnChecklist", function () {
+    checklist()
+  });
+
+  function checklist(){
 
     // Clear container
     $("#appContainer").empty();
@@ -88,7 +110,7 @@ $(document).ready(function () {
     Fparticles();
     appF();
 
-  })
+  };
 
 
   // End Checklist HTML
@@ -177,11 +199,13 @@ $(document).ready(function () {
   }
 
   // End Checklist Script
-
+  
 
   // Begin jQuery Calc HTML
   $(document).on("click", "#btnCalc", function () {
-
+    calculator()
+  });
+  function calculator(){
     // Clear container
     $("#appContainer").empty();
 
@@ -216,7 +240,7 @@ $(document).ready(function () {
     renderCalculator();
     Fparticles();
     appF();
-  })
+  }
 
 
   // End jQuery Calc HTML
@@ -327,18 +351,38 @@ $(document).ready(function () {
     })
   }
 
+
   // End jQuery Calc Script
   // Begin NYTimes HTML
   $("#btnNYT").on("click", function () {
+    newYorkTimes()
+  });
 
+  function newYorkTimes(){
     // Clear container
     $("#appContainer").empty();
 
-    var newYorkTimes = ("<div class='nytFont'><div class='container'><div class='jumbotron' style='background-color: #20315A ; color: white;'><h1 class='text-center'><strong><i class='fa fa-newspaper-o'></i> New York Times Search</strong></h1></div><div class='row'><div class='col-sm-12'><div class='card'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div><div class='card-body'><form role='form'><div class='form-group'><label for='search'>Search Term:</label><input type='text' class='form-control' id='search-term'></div><div class='form-group'><label for='pwd'>Number of Records to Retrieve:</label><select id='article-count' class='custom-select' aria-labelledby='dropdownMenuButton'><option selected value='1'>1</option><option value='5' selected>5</option><option value='10'>10</option></select></div><div class='form-group'><label for='start-year'>Start Year (Optional):</label><input type='text' class='form-control' id='start-year'></div><div class='form-group'><label for='end-year'>End Year (Optional):</label><input type='text' class='form-control' id='end-year'></div><button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i> Search</button><button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear Results</button></form></div></div></div></div><div class='row'><div class='col-sm-12'><br><div class='card'><div class='card-header'><strong><i class='fa fa-table'></i> Top Articles</strong></div><div class='card-body' id='article-section'></div></div></div></div><div class='row'><div class='col-sm-12'><hr><h5 class='text-center'><small>Made with lots and lots of<i class='fa fa-heart'></i></small></h5></div></div></div></div>")
+    var newYorkTimes = ("<div id='particles-js'><div class='container containerNYT'><div class='nytFont'>"+
+    "<div class='jumbotron gradient'><h1 style='color:#fff;' class='text-center'>"+
+    "<strong><i class='far fa-newspaper'></i>\xa0\New York Times Search</strong></h1></div><div class='row'>"+
+    "<div class='col-sm-12'><div class='card nytBox'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div>"+
+    "<div class='card-body'><form role='form'><div class='form-group'><label for='search'>Search Term:</label>"+
+    "<input type='text' class='form-control' id='search-term'></div><div class='form-group'><label for='pwd'>Number of Records to Retrieve:</label>"+
+    "<select id='article-count' class='custom-select' aria-labelledby='dropdownMenuButton'><option selected value='1'>1</option>"+
+    "<option value='5' selected>5</option><option value='10'>10</option></select></div><div class='form-group'>"+
+    "<label for='start-year'>Start Year (Optional):</label><input type='text' class='form-control' id='start-year'></div>"+
+    "<div class='form-group'><label for='end-year'>End Year (Optional):</label><input type='text' class='form-control' id='end-year'></div>"+
+    "<button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i> Search</button>"+
+    "<button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear Results</button></form></div></div></div></div>"+
+    "<div class='row'><div class='col-sm-12'><br><div class='card nytBox'><div class='card-header'><strong><i class='fa fa-table'></i> Top Articles</strong></div>"+
+    "<div class='card-body' id='article-section'></div></div></div></div><div class='row'><div class='col-sm-12'><hr><h5 class='text-center'>"+
+    "<small>Made with lots and lots of<i class='fa fa-heart'></i></small></h5></div></div></div></div></div>")
 
     $("#appContainer").append(newYorkTimes)
     renderNYTimes();
-  })
+    Fparticles();
+    appF();
+  }
   //  End NYTimes HTML
 
   // Being NYTimes Java
@@ -499,24 +543,30 @@ $(document).ready(function () {
 
   // Begin HMTL for Giphy
 
-  $(document).on("click", "#btnGiphy", function () {
+  $(document).on("click", "#btnGiphy", function() {
+    giphy()
+  });
+  
+  function giphy() {
 
     // Clear container
     $("#appContainer").empty();
 
     // importing HTML for Giphy
-    var giphy = ("<div class=' container-fluid row aaa'><div class='container-fluid user-control col-6'>" +
-      "<div style='margin-left:50px;font-size:30px;'  class='form-group'><h1 class='display-4 title-display' for='search'>Gif Search Term</h1><input type='text' class='col-12 form-control' id='search-term-input'></div>" +
+    var giphy = ("<div id='particles-js'><div class='containerGif col-12'><div class='container-fluid row'><div class='container-fluid user-control col-6'>" +
+      "<div style='margin-left:50px;font-size:30px;'  class='form-group'><h1 class='display-4 title-display' for='search'><i class='far fa-grimace'></i>\xa0\xa0Gif Search Term</h1><input type='text' class='col-12 form-control' id='search-term-input'></div>" +
       "<button style='margin-left:50px'  type='submit' class='btn search-btn col-3' id='create-search-btn'>Search</button>\xa0\xa0\xa0" +
       "<button class='btn remove-gif-button container btn-container col-3' id='clear-gif'>Clear gifs</button>\xa0\xa0\xa0<button class='btn clear-all-btn container btn-container col-4' id='clear-all'>Clear Everything</button>" +
       "<br><br><div class='row'><div class='container' id='gif-div'></div></div></div><div style='margin-top:75px' class='col-6'><div class='btn-holder'></div></div>" +
-      "<a href='#top'><img src='assets/image/top.png' alt='up2top'  style='margin-left:70px;margin-bottom:10px;width:55px;height:55px;border:0;'</a></div>")
+      // "<a href='#top'><img src='assets/image/top.png' alt='up2top'  style='margin-left:70px;margin-bottom:10px;width:55px;height:55px;border:0;'</a>"+
+      "</div></div></div>")
 
 
     $("#appContainer").append(giphy);
     renderGiphy();
-
-  })
+    Fparticles();
+    appF();
+  }
 
   // End HTML for Giphy
 
@@ -767,20 +817,28 @@ $(document).ready(function () {
 
   // Start HTML for Wikipedia
 
-  $(document).on("click", "#btnWiki", function () {
+  $(document).on("click", "#btnWiki", "#imageSearch", function () {
+    wikiPedia()
+  })
 
+function wikiPedia(){
+  
     // Clear container
     $("#appContainer").empty();
 
     // importing HTML for wikipedia
-    var wiki = ("<main><header class='searchForm-container'><form class='searchForm'><input type='search' class='wikipediaQuery'><button type='submit'> Search </button><a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank' rel='noreferrer' class='icon randomIcon'><img src='https://image.ibb.co/fR5OX5/random.png' alt='Shuffle Icon'></a></form></header>   <section class='searchResults'></section> </main>")
+    var wiki = ("<div id='particles-js'><div class='containerWiki col-12'><main><div class='row'><div class='col-9'><header class='searchForm-container'>"+
+    "<form style='margin-top:20px' class='searchForm'><input type='search' class='wikipediaQuery'><button type='submit'> Search </button>"+
+    "<a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank' rel='noreferrer' class='icon randomIcon'>"+
+    "<img src='https://image.ibb.co/fR5OX5/random.png' alt='Shuffle Icon'></a></form></header></div>"+
+    "<div class='col-3'><img style='width:50%;background:#36393fb0' src='assets/image/wikiLogo.png' alt='wikilogo'></div></div><section style='background:#36393fb0' class='searchResults'></section> </main></div></div>")
 
 
     $("#appContainer").append(wiki);
     renderWiki();
-  })
-
-
+    Fparticles();
+    appF();
+}
   // End HTML for Wikipedia
 
   // Begin Wiki Java
