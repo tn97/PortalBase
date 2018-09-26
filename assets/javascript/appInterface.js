@@ -2,6 +2,18 @@
 // IDs are subject to change
 $(document).ready(function () {
 
+  // Begin Spotify HTML
+  $(document).on("click", "#btnSpotify", function(){
+
+    // Empty Container
+    $("#appContainer").empty();
+
+    // html
+    var spotify = "<button class='btn btn-lg btn-success' id='login-button'>Login</button><div class='container'><div id='profile-info'></div><h3 id='playlists' style='display:none'>Playlists:</h3><h3 id='tracks' style='display:none'>Tracks</h3></div>"
+    
+    $("#appContainer").append(spotify);
+    renderSpotify();
+  })
   //begin search bar
 
   var $component = $('#component1')
