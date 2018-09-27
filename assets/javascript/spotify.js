@@ -128,7 +128,7 @@ function renderSpotify() {
     .on('click', function () {
 
       var client_id = spotify_CLIENT; // Your client id
-      var redirect_uri = 'http://localhost:8000'; // Your redirect uri
+      var redirect_uri = 'https://tn97.github.io/UtilSuite/'; // Your redirect uri
 
       // generate random state key
       var state = generateRandomString(16);
@@ -197,7 +197,7 @@ function renderSpotify() {
 }
 
 window.onSpotifyWebPlaybackSDKReady = () => {
-  const token = 'BQCeQTAdIaMk5eIlN-iwkUIV9KIChzIhFxBQ3Pp7YvqVpHfqxytR0P99GQ_GdjpOLNwoin15i8l3XI6pGC7itAZ4c0UJLWOeoK1eptK65dEt5GxIfV7ajNQCVOK3rAQutCmmTvuvnbu2PLFZa-Ik_cyrYr2dU_8b51fFH7Q';
+  const token = 'BQAGZOabgcvrgufXH1E0t0P1KIV_vqS_WFzZM3m3ETaiew0eziQsl5lJYTa0mHShjPs2yE32Ilrtumk71a5SX1aasCvrkEjTmnFBLrijjDhX-veUuyNp-4ukrYo1Z4Gr6osuBrDIinDq3RqpLrSKoQYIKLs81gWmsEu0zW8';
   const player = new Spotify.Player({
     name: 'UtilSuit Player',
     getOAuthToken: cb => { cb(token); }
