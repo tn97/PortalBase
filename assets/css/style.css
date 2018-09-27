@@ -61,6 +61,15 @@ z-index: 0;
     left:5%;
     }
 
+    .containerStock{
+        position: absolute;
+        display: block;
+        max-width: 100%;
+        top:5%;
+        
+        }
+    
+
 
     #container-of-boxes {
         display: table;
@@ -113,7 +122,7 @@ z-index: 0;
     
     #sidebar,
     #mainbody{
-        min-height: 800px;
+        min-height: 900px;
         margin-bottom: 0;
         display: table-cell;
         
@@ -346,6 +355,34 @@ z-index: 0;
     border-radius: 20%;
   }
 
+
+  #stock{
+    font-size:80px;
+    margin-top: 25px;
+    margin-left: auto;
+}
+
+  .overlay8 {
+    position: absolute;
+    border-radius: 50%;
+    top: 722px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #7289da;
+    background-position: center;
+  }
+  
+  .container8:hover .overlay8 {
+    opacity: 1;
+    border-radius: 20%;
+  }
+
+
   .calcApp {
     color: Black;
     margin: 15px;
@@ -358,7 +395,7 @@ z-index: 0;
     margin: 15px;
     padding: 15px;
   }
-
+  .stockFont,
   .nytFont{
     color:#36393f;
     font-family:'Catamaran', sans-serif;
