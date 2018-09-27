@@ -3,14 +3,14 @@
 $(document).ready(function () {
 
   // Begin Spotify HTML
-  $(document).on("click", "#btnSpotify", function(){
+  $(document).on("click", "#btnSpotify", function () {
 
     // Empty Container
     $("#appContainer").empty();
 
     // html
     var spotify = "<button class='btn btn-lg btn-success' id='login-button'>Login</button><div class='container'><div id='profile-info'></div><h3 id='playlists' style='display:none'>Playlists:</h3><h3 id='tracks' style='display:none'>Tracks</h3></div>"
-    
+
     $("#appContainer").append(spotify);
     renderSpotify();
   })
@@ -19,18 +19,18 @@ $(document).ready(function () {
   var $component = $('#component1')
 
   $component.hide();
-  
+
   $('#s').on('input propertychange', function () {
 
     $component.slideDown("slow");
     var content = $(this).val().trim();
-    $component.html("<div class='container'><div class='row'>"+
-    "<div style='font-size:70px;color:#36393f;top:30px;font-weight: bold' class='item col-6'>" + content + 
-    "</div><div style='margin-right:20px' class='image'><img id='imageSearch'style='margin-top:5px;' src='assets/image/" + content + 
-    ".png' alt='" + content +"'></div></div></div>");
-    
-    $(document).on("click","#imageSearch",function(){
-      switch(content){
+    $component.html("<div class='container'><div class='row'>" +
+      "<div style='font-size:70px;color:#36393f;top:30px;font-weight: bold' class='item col-6'>" + content +
+      "</div><div style='margin-right:20px' class='image'><img id='imageSearch'style='margin-top:5px;' src='assets/image/" + content +
+      ".png' alt='" + content + "'></div></div></div>");
+
+    $(document).on("click", "#imageSearch", function () {
+      switch (content) {
         case 'wiki':
           wikiPedia();
           break;
@@ -49,7 +49,7 @@ $(document).ready(function () {
       }
 
       $(".fa-search-minus").click();
-      
+
     })
 
   });
@@ -84,7 +84,7 @@ $(document).ready(function () {
   // Begin homepage HTML
 
   // Begin jQuery Calc HTML
-  $(document).on("click", "#btnHome",  function () {
+  $(document).on("click", "#btnHome", function () {
 
     // Clear container
     $("#appContainer").empty();
@@ -93,18 +93,18 @@ $(document).ready(function () {
     var home = (" <div id='lineDrawing'> <svg viewBox='-50 -100 700 300'><g id='g' fill='none' fill-rule='evenodd' stroke='black' stroke-width='1' class='lines'><path d='M156,41.3c0.5,0.5,0.8,0.9,0.8,1.4c0,1.4-1,2.1-3,2.1 c-0.5,0-1.3-0.1-2.3-0.3s-1.7-0.3-2.2-0.3c-2.9,0-5.9,2.9-8.8,8.6c-13.7,26.2-22.9,56.7-27.7,91.6c1-2.8,2-5.1,3.2-6.8c1-1.5,2.1-3,3.1-4.5c0.8-1.3,1.7-2,2.7-2c1.1,0,1.7,0.8,1.7,2.3c0,0.9-0.3,1.8-0.8,2.9c-4.2,9.4-7.1,18.7-8.7,28c-0.6,3.6-1.9,5.4-4.1,5.4c-2.3,0-5.5-1.8-9.8-5.4c-2.7-2.3-4.1-3.8-4.1-4.6c0-0.3,0.1-0.9,0.4-1.8c0.3-0.9,0.6-1.9,0.7-2.8c1.9-14.2,5.7-32.3,11.6-54.2c-14.1,26.1-27.3,46.2-39.6,60.3c-3.8,4.3-7.7,6.5-11.9,6.5s-7.7-2-10.6-5.9c-6.7-5.4-10.7-8.9-12-10.6    c-2.5-3.4-3.7-8.5-3.7-15.2c0-1.5,0-3.1,0.1-4.9c0.5-9.7,3.3-22.5,8.3-38.4c4.9-15.7,10.6-29.9,17-42.8c-17.9,6-30.6,11.6-38,16.9c-3.5,2.6-5.2,5.2-5.2,7.9c0-0.1,0.9,3.4,2.7,10.5c0.1,0.3,0.1,0.7,0.1,1c0,1.2-0.6,1.8-1.7,1.8c-1.9,0-3.5-1.2-4.9-3.5C3.7,74.9,1,68.2,1,64.2c0-5.4,3.7-9.3,11.1-11.6c12.6-3.4,28.5-8.1,47.7-14.1c3.1-4.9,5.9-7.4,8.5-7.4c2.8,0,6.9,2.6,12.2,7.8c0.8,0.7,1.2,1.4,1.2,2c0,1.4-3,2.7-9.1,4c-7.8,13-14.6,29.6-20.4,49.9c-5.1,17.8-7.8,32.3-8.3,43.5c-0.2,5.8,1,10.4,3.5,13.8c2.3,3.1,5.1,4.7,8.6,4.7c3.4,0,6.3-1.5,8.9-4.6c11.5-13.6,22.5-29.6,33.1-48c7.4-12.8,16.8-31,28.2-54.5c2.7-5.4,5.6-10.5,8.7-15.2c1.4-2.1,3.1-3.1,5.1-3.1C143.1,31.4,148.5,34.7,156,41.3L156,41.3z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M191.7,38.4c1.8,1,2.7,2.1,2.7,3.3c0,0.9-0.6,1.3-1.8,1.3c-0.3,0-0.7,0-1.3-0.1c-0.5-0.1-0.9-0.2-1.2-0.2c-2.5,0-5.4,2.7-8.9,8.2c-3.1,4.8-7.4,15.4-12.9,31.6c-0.5,1.4-0.7,2.3-0.6,2.6c0.2,0.5,1,0.7,2.5,0.8c3.8,0.3,8.9,0.2,15.4-0.4c2.2-0.2,3.3,0.8,3.3,2.9c0,1.4-0.8,2.3-2.5,2.7c-1.4,0.2-8.5,0.8-21.5,1.8c-7.8,23-12.5,42.5-14.2,58.4c-0.1,0.9-0.1,1.6-0.1,2.3c0,2.2,0.6,3.3,1.7,3.3c1.7,0,7-4.3,15.8-12.9c1-1,2-1.6,3-1.6c0.8,0,1.4,0.4,1.6,1.1c0.2,0.8-0.1,1.7-0.9,2.8c-5.2,7-10.4,13-15.4,17.9c-2.1,2-3.9,3-5.3,3s-3.6-1.1-6.6-3.4c-3.7-1-5.5-2.9-5.5-5.9c0-0.5,0.1-1,0.2-1.6c2.4-16.9,7.1-37.7,14.1-62.4c-3.4-0.5-6.5-0.9-9.3-1.4c-1.2-0.2-1.8-1-1.8-2.4c0-1.5,0.6-2.4,1.9-2.8c1.3-0.3,3.7-1,7.2-2.2c2.1-0.7,4.2-1.7,6.2-2.9c6.9-21.7,12.4-35.7,16.3-42.2c2.3-3.7,4.7-5.5,7.3-5.5C183.4,34.5,187,35.8,191.7,38.4L191.7,38.4z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M224.4,54c1,0.8,1.6,1.7,1.6,2.7c0,1.9-2.8,4.8-8.4,8.8c-3.7,2.6-7.3,3.5-10.7,2.8c-1.9-0.4-3.6-1.1-5.1-2.2c-0.5-0.4-0.8-0.8-1.1-1.2c-0.2-0.5-0.2-0.8-0.1-1.1c0.2-0.3,0.6-0.3,1.2-0.2c6-5.2,9.9-9,11.8-11.3c1.5-1.7,2.6-2.6,3.2-2.6C218,49.7,220.5,51.1,224.4,54L224.4,54z M210.7,97c-1.6,8.8-5.6,23.6-12.1,44.1c1.9-1.7,4.5-4.8,7.8-9.3c0.5-0.6,0.9-0.9,1.4-0.9c1,0,1.2,0.9,0.4,2.8c-0.3,0.7-3,5.2-8.2,13.5c-3.9,6.3-6.7,11.9-8.5,16.7c-0.6,1.5-1.7,2.3-3.2,2.3c-1.6,0-3.7-0.8-6.3-2.3c-1.7-0.9-2.5-1.6-2.5-2.1c0-0.4,0.4-1.2,1.1-2.6c3.5-6.2,7.4-16.6,11.7-31.3c4.1-14.2,6.4-24.7,6.9-31.5c0.2-2.9-0.1-4.4-0.9-4.4c-0.6,0-1.6,0.7-3.1,2.2l-6,5.7c-2.1,2-3.2,2.1-3.2,0.3c0-0.5,0.3-1.2,0.9-2c3-4.3,6.3-8.4,9.7-12.3c1-1.1,2-1.7,3-1.7s2.6,0.7,4.6,2.2c3,0.8,4.6,1.3,5,1.5c1.5,0.9,2.2,2.6,2.2,5.1C211.1,94.2,211,95.5,210.7,97L210.7,97z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M298.6,11.3c0.8,0.7,1.3,1.3,1.3,2.1c0,1.2-0.7,1.9-2.2,1.9c-0.6,0-1.3-0.2-2-0.6c-3-1.5-5.2-2.3-6.7-2.3c-4.1,0-8.5,4-13.4,12c-17.6,29-30.2,66.5-37.6,112.5c-0.2,1.2-0.5,2.9-1,5c1.5-1.6,3.7-4.1,6.6-7.7c1.7-2,2.9-3,3.7-3c1.7,0,1.8,1,0.4,3c-6.2,9-10.3,18.4-12.3,28.2c-0.7,2.4-1.6,3.6-2.7,3.6c-0.5,0-1.2-0.3-2-0.9c-3.3-2.2-5.2-3.5-5.6-3.9c-1.3-1.3-1.9-3-1.9-5.1c0-1,0.2-2.3,0.5-3.8c7.5-41.7,17.2-77.3,29-106.6c8.9-22.1,16.9-36.5,24-43c1.9-1.8,3.9-2.7,5.8-2.7c1.7,0.1,4,1.2,6.8,3.3C292.2,6,295.4,8.6,298.6,11.3L298.6,11.3z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M380.4,43.8c-2.5,9-6,16.8-10.3,23.4c-1.9,2.9-3.8,4.4-5.5,4.4    s-4.6-1.4-8.8-4.2c-1.3-0.9-1.9-1.7-1.9-2.7c0-1.4,1.1-2.4,3.4-2.9c1.7-0.5,3.6-3.5,5.7-8.9c2-5.2,3-9.2,3-12.2c0-3.1-1.2-4.6-3.6-4.6c-0.8,0-1.9,0.1-3.2,0.4c-2.5,0.4-8,2.1-16.3,5.2c-1,0.3-1.8,0.5-2.6,0.5c-1.9,0-2.9-0.7-2.9-2c0-1.2,1-2.4,3-3.3c7.3-3.7,14.4-6.7,21.5-9.2c2.3-0.9,3.9-1.3,4.9-1.3c1.5,0,3.4,2.1,5.8,6.3c3.6,1.1,5.9,1.9,6.7,2.5c1.4,0.9,2.1,2.2,2.1,3.9C381.2,40.3,380.9,41.9,380.4,43.8L380.4,43.8z M351.3,134.1c0,11.9-6,21.4-17.9,28.6c-3.4,5.4-7.9,8.1-13.3,8.1c-9.7-0.1-20.4-4.5-32.3-13.1c-10.2-7.3-17.2-14.4-21.1-21.2c-3.7-6.4-5.5-10.4-5.5-12c0-2,1.5-4.3,4.4-6.9c2.7-2.4,4.9-3.6,6.4-3.6s2.2,1,2.2,2.9c0,0.9-0.2,1.9-0.5,3.1c3.4,9.4,10.7,18.2,21.8,26.3c11.1,8.1,21.1,12.2,30.1,12.1c8-0.1,12-5.6,12-16.5c0-6-4.7-18.1-14-36.1c-9.3-18.1-13.9-31-13.9-38.8c0-5.1,1.4-9.7,4.3-13.7c2.4-3.3,6.6-7.3,12.6-11.9c1.1-0.9,2.2-1.3,3.3-1.3c1.7,0,2.6,0.8,2.6,2.3c0,1-0.6,2.1-1.7,3.2c-5,4.8-7.5,10.6-7.5,17.5c0,7.7,4.7,20.3,14,37.9S351.3,129.7,351.3,134.1L351.3,134.1z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M441.7,92.6c-8.6,16.2-15.1,35.2-19.3,57c1.8-3.2,4-7.3,6.6-12.3c0.3-0.9,0.8-1.4,1.6-1.4c1,0,1.5,0.6,1.5,1.9c0,0.4-0.1,0.8-0.3,1.3c-4.1,9.6-6.9,16.9-8.2,22.1c-0.8,3.3-1.8,4.9-3.1,4.9     s-3.8-1.3-7.6-3.8c-2-1.4-2.7-4-2-7.7c2.7-14.3,6-26.7,9.8-37.2c-12.5,20.6-23,35.7-31.5,45.5c-1.9,2.2-3.9,3.2-6.1,3.2c-1.8,0-4-0.8-6.4-2.3c-4.5-0.8-6.7-3.1-6.7-7.1c0-0.7,0.1-1.5,0.2-2.4c1.6-18.7,5-34.3,10.1-46.7c-1.1,1-2.8,2.6-5,4.6c-0.8,0.7-1.5,0.9-1.9,0.6c-0.5-0.4-0.4-1.1,0.3-2.3c3.5-5.2,5.6-8.6,6.2-10.2c2-5.1,4.1-9.1,6.3-11.9c1.2-1.4,2.4-2.2,3.7-2.2c1.7,0,4.3,1,7.7,3.1c0.9,0.6,1.4,1.2,1.4,1.8c0,0-0.7,1.1-2.1,3.2c-3.2,5-6.7,13.8-10.3,26.3c-4,13.6-6,24.7-6,33.3c0,2.8,0.6,4.2,1.7,4.2c1,0,2.7-1.2,5.1-3.6c5-5.4,12.2-15.5,21.7-30.5c8.4-13.2,13.4-21.8,15.2-25.7c2.9-6.7,5.3-10.6,7.1-11.8c1.2-0.8,2.2-1.2,3.1-1.2s2.7,0.7,5.2,2.1c2.6,1.4,3.9,2.4,3.9,3c0,0.2-0.2,0.5-0.7,0.8C442.2,91.8,441.9,92.2,441.7,92.6L441.7,92.6z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M487.5,54c1,0.8,1.6,1.7,1.6,2.7c0,1.9-2.8,4.8-8.4,8.8c-3.7,2.6-7.3,3.5-10.7,2.8c-1.9-0.4-3.6-1.1-5.1-2.2c-0.5-0.4-0.8-0.8-1.1-1.2c-0.2-0.5-0.2-0.8-0.1-1.1c0.2-0.3,0.6-0.3,1.2-0.2c6-5.2,9.9-9,11.8-11.3c1.5-1.7,2.6-2.6,3.2-2.6C481.1,49.7,483.6,51.1,487.5,54L487.5,54z M473.8,97c-1.6,8.8-5.6,23.6-12.1,44.1c1.9-1.7,4.5-4.8,7.8-9.3c0.5-0.6,0.9-0.9,1.4-0.9c1,0,1.2,0.9,0.4,2.8c-0.3,0.7-3,5.2-8.2,13.5c-3.9,6.3-6.7,11.9-8.5,16.7c-0.6,1.5-1.7,2.3-3.2,2.3s-3.7-0.8-6.3-2.3c-1.7-0.9-2.5-1.6-2.5-2.1c0-0.4,0.4-1.2,1.1-2.6c3.5-6.2,7.4-16.6,11.7-31.3c4.1-14.2,6.4-24.7,6.9-31.5c0.2-2.9-0.1-4.4-0.9-4.4c-0.6,0-1.6,0.7-3.1,2.2l-6,5.7c-2.1,2-3.2,2.1-3.2,0.3c0-0.5,0.3-1.2,0.9-2c3-4.3,6.3-8.4,9.7-12.3c1-1.1,2-1.7,3-1.7s2.6,0.7,4.6,2.2c3,0.8,4.6,1.3,5,1.5c1.5,0.9,2.2,2.6,2.2,5.1        C474.2,94.2,474.1,95.5,473.8,97L473.8,97z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M539.1,38.4c1.8,1,2.7,2.1,2.7,3.3c0,0.9-0.6,1.3-1.8,1.3c-0.3,0-0.7,0-1.3-0.1c-0.5-0.1-0.9-0.2-1.2-0.2c-2.5,0-5.4,2.7-8.9,8.2c-3.1,4.8-7.4,15.4-12.9,31.6c-0.5,1.4-0.7,2.3-0.6,2.6c0.2,0.5,1,0.7,2.5,0.8c3.8,0.3,8.9,0.2,15.4-0.4c2.2-0.2,3.3,0.8,3.3,2.9c0,1.4-0.8,2.3-2.5,2.7c-1.4,0.2-8.5,0.8-21.5,1.8        c-7.8,23-12.5,42.5-14.2,58.4c-0.1,0.9-0.1,1.6-0.1,2.3c0,2.2,0.6,3.3,1.7,3.3c1.7,0,7-4.3,15.8-12.9c1-1,2-1.6,3-1.6c0.8,0,1.4,0.4,1.6,1.1c0.2,0.8-0.1,1.7-0.9,2.8c-5.2,7-10.4,13-15.4,17.9c-2.1,2-3.9,3-5.3,3s-3.6-1.1-6.6-3.4c-3.7-1-5.5-2.9-5.5-5.9c0-0.5,0.1-1,0.2-1.6c2.4-16.9,7.1-37.7,14.1-62.4c-3.4-0.5-6.5-0.9-9.3-1.4c-1.2-0.2-1.8-1-1.8-2.4c0-1.5,0.6-2.4,1.9-2.8c1.3-0.3,3.7-1,7.2-2.2c2.1-0.7,4.2-1.7,6.2-2.9c6.9-21.7,12.4-35.7,16.3-42.2c2.3-3.7,4.7-5.5,7.3-5.5C530.8,34.5,534.4,35.8,539.1,38.4L539.1,38.4z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/><path d='M581.4,135.8c-15.7,20.4-26.8,30.6-33.2,30.6c-3,0-6.9-2.1-11.6-6.4c-4.9-2.3-7.3-5.4-7.3-9.2c0-0.7,0.1-1.5,0.2-2.3c1.2-9,3.5-18.9,7.1-29.8c-2.4-1.2-3.6-2.4-3.6-3.5c0-0.9,0.7-1.4,2-1.4c1,0,2.1,0.3,3.2,0.9c5.8-13.1,10.9-22.4,15.5-27.9c3-3.7,5.7-5.5,8.1-5.5c1.1,0,3.8,0.9,8.2,2.9c-0.3-2,0.2-3.1,1.7-3.4c0.1,0,1.6,0,4.6,0c2.8,0,4.2,0.5,4.2,1.5c0,0.2-0.1,0.8-0.3,1.7c-0.2,0.9-0.3,1.8-0.3,2.6c0,2.4,0,5.3,0.1,8.7c0.1,3.5,0.1,5.8,0.1,7c0,8.1-2.2,13.8-6.6,17c-4,2.9-8.5,4.4-13.6,4.4c-2.7,0-7.1-0.7-13.2-2.2c-1.1,2-2.3,6-3.7,11.9c-1.8,7.5-2.7,14.1-2.5,19.9c0.1,3.4,1.1,5.1,3.2,5.1c0.8,0,1.8-0.2,3-0.6c7.5-2.7,18-10.9,31.4-24.6c0.8-0.9,1.7-1.3,2.5-1.3c1.2,0,1.8,0.6,1.8,1.8C582.4,134.3,582,135,581.4,135.8L581.4,135.8z M570,92.4c0-2.6-0.6-3.8-1.7-3.8c-0.7,0-1.7,0.5-3.1,1.6c-6.3,5.2-11.9,14.3-16.7,27.2c1.3,0.2,3.6,0.4,6.8,0.6c5.2,0.2,9.2-1,11.8-3.6c1.9-2,3-5.2,3.2-9.7C570.1,107.9,570,103.8,570,92.4L570,92.4z' stroke-dasharray='30' style='stroke-dashoffset: 30px'/></g></svg> </div>")
 
     $("#appContainer").append(home);
-    UtilSuite ();
+    UtilSuite();
   })
 
   // End homepage HTML
- 
+
   // Begin Checklist HTML
 
   $(document).on("click", "#btnChecklist", function () {
     checklist()
   });
 
-  function checklist(){
+  function checklist() {
 
     // Clear container
     $("#appContainer").empty();
@@ -211,13 +211,13 @@ $(document).ready(function () {
   }
 
   // End Checklist Script
-  
+
 
   // Begin jQuery Calc HTML
   $(document).on("click", "#btnCalc", function () {
     calculator()
   });
-  function calculator(){
+  function calculator() {
     // Clear container
     $("#appContainer").empty();
 
@@ -370,25 +370,25 @@ $(document).ready(function () {
     newYorkTimes()
   });
 
-  function newYorkTimes(){
+  function newYorkTimes() {
     // Clear container
     $("#appContainer").empty();
 
-    var newYorkTimes = ("<div id='particles-js'><div class='container containerNYT'><div class='nytFont'>"+
-    "<div class='jumbotron gradient'><h1 style='color:#fff;' class='text-center'>"+
-    "<strong><i class='far fa-newspaper'></i>\xa0\New York Times Search</strong></h1></div><div class='row'>"+
-    "<div class='col-sm-12'><div class='card nytBox'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div>"+
-    "<div class='card-body'><form role='form'><div class='form-group'><label for='search'>Search Term:</label>"+
-    "<input type='text' class='form-control' id='search-term'></div><div class='form-group'><label for='pwd'>Number of Records to Retrieve:</label>"+
-    "<select id='article-count' class='custom-select' aria-labelledby='dropdownMenuButton'><option selected value='1'>1</option>"+
-    "<option value='5' selected>5</option><option value='10'>10</option></select></div><div class='form-group'>"+
-    "<label for='start-year'>Start Year (Optional):</label><input type='text' class='form-control' id='start-year'></div>"+
-    "<div class='form-group'><label for='end-year'>End Year (Optional):</label><input type='text' class='form-control' id='end-year'></div>"+
-    "<button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i> Search</button>"+
-    "<button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear Results</button></form></div></div></div></div>"+
-    "<div class='row'><div class='col-sm-12'><br><div class='card nytBox'><div class='card-header'><strong><i class='fa fa-table'></i> Top Articles</strong></div>"+
-    "<div class='card-body' id='article-section'></div></div></div></div><div class='row'><div class='col-sm-12'><hr><h5 class='text-center'>"+
-    "<small>Made with lots and lots of<i class='fa fa-heart'></i></small></h5></div></div></div></div></div>")
+    var newYorkTimes = ("<div id='particles-js'><div class='container containerNYT'><div class='nytFont'>" +
+      "<div class='jumbotron gradient'><h1 style='color:#fff;' class='text-center'>" +
+      "<strong><i class='far fa-newspaper'></i>\xa0\New York Times Search</strong></h1></div><div class='row'>" +
+      "<div class='col-sm-12'><div class='card nytBox'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div>" +
+      "<div class='card-body'><form role='form'><div class='form-group'><label for='search'>Search Term:</label>" +
+      "<input type='text' class='form-control' id='search-term'></div><div class='form-group'><label for='pwd'>Number of Records to Retrieve:</label>" +
+      "<select id='article-count' class='custom-select' aria-labelledby='dropdownMenuButton'><option selected value='1'>1</option>" +
+      "<option value='5' selected>5</option><option value='10'>10</option></select></div><div class='form-group'>" +
+      "<label for='start-year'>Start Year (Optional):</label><input type='text' class='form-control' id='start-year'></div>" +
+      "<div class='form-group'><label for='end-year'>End Year (Optional):</label><input type='text' class='form-control' id='end-year'></div>" +
+      "<button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i> Search</button><span>&nbsp&nbsp</span>" +
+      "<button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear Results</button></form></div></div></div></div>" +
+      "<div class='row'><div class='col-sm-12'><br><div class='card nytBox'><div class='card-header'><strong><i class='fa fa-table'></i> Top Articles</strong></div>" +
+      "<div class='card-body' id='article-section'></div></div></div></div><div class='row'><div class='col-sm-12'><hr><h5 class='text-center'>" +
+      "<small>Made with lots and lots of<i class='fa fa-heart'></i></small></h5></div></div></div></div></div>")
 
     $("#appContainer").append(newYorkTimes)
     renderNYTimes();
@@ -555,10 +555,10 @@ $(document).ready(function () {
 
   // Begin HMTL for Giphy
 
-  $(document).on("click", "#btnGiphy", function() {
+  $(document).on("click", "#btnGiphy", function () {
     giphy()
   });
-  
+
   function giphy() {
 
     // Clear container
@@ -753,9 +753,9 @@ $(document).ready(function () {
 
   //End javaScript for Giphy
 
-  
+
   // Start HTML for Wikipedia
-  
+
   $(document).on("click", "#btnWiki", function () {
 
     // Clear container
@@ -768,89 +768,8 @@ $(document).ready(function () {
     $("#appContainer").append(wiki);
     renderWiki();
   })
-  
-  
-  // End HTML for Wikipedia
-
-  // Begin Wiki Java
-
-  function renderWiki() {
-    function handleSubmit(event) {
-      // prevent page from reloading when form is submitted
-      event.preventDefault();
-      // get the value of the input field
-      const input = document.querySelector(".wikipediaQuery").value;
-      // remove whitespace from the input
-      const searchQuery = input.trim();
-      // call `fetchResults` and pass it the `searchQuery`
-      fetchResults(searchQuery);
-    }
-    
-    function fetchResults(searchQuery) {
-      const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
-      fetch(endpoint)
-        .then(response => response.json())
-        .then(data => {
-          const results = data.query.search;
-          displayResults(results);
-          console.log(results);
-      });
-    }
-    
-    
-    
-    function displayResults(results) {
-      // Store a reference to `.searchResults`
-      const searchResults = document.querySelector(".searchResults");
-      // Remove all child elements
-      searchResults.innerHTML = "";
-      // Loop over results array
-      results.forEach(result => {
-      const url = encodeURI(`https://en.wikipedia.org/wiki/${result.title}`);
-    
-      searchResults.insertAdjacentHTML("beforeend",
-          `<div class="resultItem">
-            <h3 class="resultItem-title">
-              <a href="${url}" target="_blank" rel="noreferrer">${result.title}</a>
-            </h3>
-            <span class="resultItem-snippet">${result.snippet}</span><br>
-            <a href="${url}" class="resultItem-link" target="_blank" rel="noreferrer">${url}</a>
-          </div>`
-        );
-      });
-    }
-    
-    const form = document.querySelector(".searchForm");
-    form.addEventListener("submit", handleSubmit);
-
-  }
-  
-  // End Wiki Java
-
-  // Start HTML for Wikipedia
-
-  $(document).on("click", "#btnWiki", "#imageSearch", function () {
-    wikiPedia()
-  })
-
-function wikiPedia(){
-  
-    // Clear container
-    $("#appContainer").empty();
-
-    // importing HTML for wikipedia
-    var wiki = ("<div id='particles-js'><div class='containerWiki col-12'><main><div class='row'><div class='col-9'><header class='searchForm-container'>"+
-    "<form style='margin-top:20px' class='searchForm'><input type='search' class='wikipediaQuery'><button type='submit'> Search </button>"+
-    "<a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank' rel='noreferrer' class='icon randomIcon'>"+
-    "<img src='https://image.ibb.co/fR5OX5/random.png' alt='Shuffle Icon'></a></form></header></div>"+
-    "<div class='col-3'><img style='width:50%;background:#36393fb0' src='assets/image/wikiLogo.png' alt='wikilogo'></div></div><section style='background:#36393fb0' class='searchResults'></section> </main></div></div>")
 
 
-    $("#appContainer").append(wiki);
-    renderWiki();
-    Fparticles();
-    appF();
-}
   // End HTML for Wikipedia
 
   // Begin Wiki Java
@@ -908,7 +827,264 @@ function wikiPedia(){
 
   // End Wiki Java
 
+  // Start HTML for Wikipedia
 
+  $(document).on("click", "#btnWiki", "#imageSearch", function () {
+    wikiPedia()
+  })
+
+  function wikiPedia() {
+
+    // Clear container
+    $("#appContainer").empty();
+
+    // importing HTML for wikipedia
+    var wiki = ("<div id='particles-js'><div class='containerWiki col-12'><main><div class='row'><div class='col-9'><header class='searchForm-container'>" +
+      "<form style='margin-top:20px' class='searchForm'><input type='search' class='wikipediaQuery'><button type='submit'> Search </button>" +
+      "<a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank' rel='noreferrer' class='icon randomIcon'>" +
+      "<img src='https://image.ibb.co/fR5OX5/random.png' alt='Shuffle Icon'></a></form></header></div>" +
+      "<div class='col-3'><img style='width:50%;background:#36393fb0' src='assets/image/wikiLogo.png' alt='wikilogo'></div></div><section style='background:#36393fb0' class='searchResults'></section> </main></div></div>")
+
+
+    $("#appContainer").append(wiki);
+    renderWiki();
+    Fparticles();
+    appF();
+  }
+  // End HTML for Wikipedia
+
+  // Begin Wiki Java
+
+  function renderWiki() {
+    function handleSubmit(event) {
+      // prevent page from reloading when form is submitted
+      event.preventDefault();
+      // get the value of the input field
+      const input = document.querySelector(".wikipediaQuery").value;
+      // remove whitespace from the input
+      const searchQuery = input.trim();
+      // call `fetchResults` and pass it the `searchQuery`
+      fetchResults(searchQuery);
+    }
+
+    function fetchResults(searchQuery) {
+      const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
+      fetch(endpoint)
+        .then(response => response.json())
+        .then(data => {
+          const results = data.query.search;
+          displayResults(results);
+          console.log(results);
+        });
+    }
+
+
+
+    function displayResults(results) {
+      // Store a reference to `.searchResults`
+      const searchResults = document.querySelector(".searchResults");
+      // Remove all child elements
+      searchResults.innerHTML = "";
+      // Loop over results array
+      results.forEach(result => {
+        const url = encodeURI(`https://en.wikipedia.org/wiki/${result.title}`);
+
+        searchResults.insertAdjacentHTML("beforeend",
+          `<div class="resultItem">
+            <h3 class="resultItem-title">
+              <a href="${url}" target="_blank" rel="noreferrer">${result.title}</a>
+            </h3>
+            <span class="resultItem-snippet">${result.snippet}</span><br>
+            <a href="${url}" class="resultItem-link" target="_blank" rel="noreferrer">${url}</a>
+          </div>`
+        );
+      });
+    }
+
+    const form = document.querySelector(".searchForm");
+    form.addEventListener("submit", handleSubmit);
+
+  }
+
+  // End Wiki Java
+  //-----------------------------------
+
+  // Start HTML for stock
+
+  $(document).on("click", "#btnStock", function () {
+
+    // Clear container
+    $("#appContainer").empty();
+
+    // importing HTML for stock
+    var stock = ("<div id='particles-js'><div class='containerStock'><div class='stockFont'><div class='jumbotron gradientStock'>" +
+      "<h1 style='color:#fff;' class='text-center'><strong><i class='far fa-newspaper'></i>Stock Search</strong></h1></div>" +
+      "<div class='row'><div class='col-sm-6'><div class='card stockBox'><div class='card-header'><strong><i class='fa fa-list-alt'></i> Search Parameters</strong></div>" +
+      "<div class='card-body'><form role='form'><div class='form-group'><label for='search'>Ticker</label><input type='text' class='form-control' id='ticker'></div>" +
+      "<div class='form-group'><label for='start-year'>Year</label><input type='text' class='form-control' id='year'></div>" +
+      "<div class='form-group'><label for='month'>Month</label><input type='text' class='form-control'id='month'></div>" +
+      "<div class='form-group'><label for='day'>Day</label><input type='text' class='form-control'id='day'></div>" +
+      "<button type='submit' class='btn btn-default' id='run-search'><i class='fa fa-search'></i>Search</button><span>&nbsp&nbsp</span><button class='btn btn-default' id='clear-all'><i class='fa fa-trash'></i> Clear" +
+      "Results</button></form></div></div></div><div class='col-sm-6'><div style='margin-top:0px' class='row'><div class='col-sm-12'>" +
+      "<div class='card stockBox'><div class='card-header'><strong><i class='fa fa-table'></i> Statistics</strong></div>" +
+      "<div class='card-body' id='stock-section'><div class='open'></div><div class='high'></div><div class='low'></div><div class='close1'>" +
+      "</div><div class='vol'></div></div></div></div></div><div class='row'><div class='col-sm-12'><hr></div></div><div class='newsBox row'>< div id = 'slideshow' class='col-sm-12'>" +
+      "<div><p style='color:white;'>DOW JONES INDUSTRIALS</p><span style='background: #03699d;color:white;font-size: 20px'>&nbsp15,843.22&nbsp </span>" +
+      "<span style='font-size: 20px;background: #08507c;color:white'>&nbsp616.53&nbsp</span><span><img style='width: 7%' src='assets/image/down.png' alt=''></span></div>" +
+      "<div><p style='color:white;'>STANDARD AND POOR'S 500</p><span style='background: #03699d;color:white;font-size: 20px'>&nbsp1,891.83&nbsp </span>" +
+      "<span style='font-size: 20px;background: #08507c;color:white'>&nbsp79.06&nbsp</span><span><img style='width: 7%' src='assets/image/down.png' alt=''></span>" +
+      "</div><div><p style='color:white;'>NASDAQ COMPOSITE</p><span style='background: #03699d;color:white;font-size: 20px'>&nbsp4,500.30&nbsp </span>" +
+      "<span style='font-size: 20px;background: #08507c;color:white'>&nbsp205.74&nbsp</span><span><img style='width: 7%' src='assets/image/up.png' alt=''></span>" +
+      "</div></div></div></div></div ></div ></div ></div >")
+
+      
+
+
+    $("#appContainer").append(stock);
+    // slide()
+    renderStock();
+    Fparticles();
+    appF();
+    
+  })
+
+
+  // End HTML for stock
+
+  // Begin stock Java
+  // function slide() {
+  //   $("#slideshow > div:gt(0)").hide();
+  //   console.log('aa');
+
+  //   setInterval(function () {
+  //     $('#slideshow > div:first')
+  //       .fadeOut(1000)
+  //       .next()
+  //       .fadeIn(1000)
+  //       .end()
+  //       .appendTo('#slideshow');
+  //       console.log(bb);
+  //   }, 3000);
+    
+  // }
+
+  function renderStock() {
+
+    
+
+    var Day = null;
+
+    function buildQueryURL() {
+
+      var ticker = $("#ticker")
+        .val()
+        .trim()
+        .toUpperCase();
+
+      var year = $("#year")
+        .val()
+        .trim();
+
+      var month = $("#month")
+        .val()
+        .trim();
+
+      var day = $("#day")
+        .val()
+        .trim();
+
+      Day = year + "-" + month + "-" + day
+      var Ticker = ticker
+
+
+      // "TLRY"
+      var APIKey = "KC5ST3L4FBX17XDJ";
+      var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY" +
+        "&symbol=" + Ticker +
+        "&apikey=" + APIKey
+
+      return queryURL
+
+    }
+
+
+    function clear() {
+      $("#article-section").empty();
+    }
+
+    // CLICK HANDLERS
+    // ==========================================================
+
+    // .on("click") function associated with the Search Button
+    $("#run-search").on("click", function (event) {
+
+
+      event.preventDefault();
+
+      clear();
+
+      var queryURL = buildQueryURL();
+      console.log(Day)
+      console.log(queryURL)
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+        console.log(response);
+
+        var openPrice = response["Time Series (Daily)"][Day]["1. open"];
+
+        var highPrice = response["Time Series (Daily)"][Day]["2. high"];
+
+        var lowPrice = response["Time Series (Daily)"][Day]["3. low"];
+
+        var closePrice = response["Time Series (Daily)"][Day]["4. close"];
+
+        var volume = response["Time Series (Daily)"][Day]["5. volume"];
+
+        console.log(openPrice);
+        console.log(closePrice);
+
+
+        var openRound = Number.parseFloat(openPrice).toFixed(2);
+
+        $(".open").text("Open: $" + openRound);
+
+        var highRound = Number.parseFloat(highPrice).toFixed(2);
+
+        $(".high").text("High: $" + highRound);
+
+        var lowRound = Number.parseFloat(lowPrice).toFixed(2);
+
+        $(".low").text("Low: $" + lowRound);
+
+        var closeRound = Number.parseFloat(closePrice).toFixed(2);
+
+        $(".close1").text("Close: $" + closeRound);
+
+        var volRound = Number.parseFloat(volume).toFixed(0);
+
+        var volString = volRound.toLocaleString()
+
+        $(".vol").text("Volume: " + volString);
+      });
+
+      //  .on("click") function associated with the clear button
+      $("#clear-all").on("click", clear);
+
+    });
+
+  }
+
+  // End stock Java
+
+  //----------------------
   // appfile1.js
   // appfile2.js
   // appfile3.js
