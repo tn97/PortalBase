@@ -197,7 +197,7 @@ function renderSpotify() {
 }
 
 window.onSpotifyWebPlaybackSDKReady = () => {
-  const token = 'BQCXDaiMrLkKID0399-NwLp5op_CxA2pUgNoRwYPQmkC05G39Hr2PVuz7VMad04al7FlrXRgqustYWTVANIp3UJvMd06H8raRCLx1IFZx00646q5KAk72ddug8H1ZCx641NhxbbJwhc4Atu0wQyeKsOluupXKvm867_IrFQ';
+  const token = 'BQAGZOabgcvrgufXH1E0t0P1KIV_vqS_WFzZM3m3ETaiew0eziQsl5lJYTa0mHShjPs2yE32Ilrtumk71a5SX1aasCvrkEjTmnFBLrijjDhX-veUuyNp-4ukrYo1Z4Gr6osuBrDIinDq3RqpLrSKoQYIKLs81gWmsEu0zW8';
   const player = new Spotify.Player({
     name: 'UtilSuit Player',
     getOAuthToken: cb => { cb(token); }
