@@ -1,8 +1,8 @@
 var dev_id = "";
 function renderSpotify() {
-  var spotify_CLIENT = "31ad0b6fdc1c4b9bad8f0b5fa7836d06";
+  var spotify_CLIENT = "<token for your app here>"; // requires a token for the client given by Spotify when submitting an application for the api.
   var stateKey = 'spotify_auth_state';
-  var bearer_token = "BQAWqcs1GL6F8qutafjHSldcI8b31Q8cBurkEGRUzi";
+  var bearer_token = "<https://developer.spotify.com/console/put-play/ <--- go here for OAuth>"; // found in the documentation
 
   // initiate spotify
   var spotifyApi = new SpotifyWebApi();
@@ -197,7 +197,7 @@ function renderSpotify() {
 }
 
 window.onSpotifyWebPlaybackSDKReady = () => {
-  const token = 'BQAGZOabgcvrgufXH1E0t0P1KIV_vqS_WFzZM3m3ETaiew0eziQsl5lJYTa0mHShjPs2yE32Ilrtumk71a5SX1aasCvrkEjTmnFBLrijjDhX-veUuyNp-4ukrYo1Z4Gr6osuBrDIinDq3RqpLrSKoQYIKLs81gWmsEu0zW8';
+  const token = '<https://developer.spotify.com/documentation/web-playback-sdk/quick-start/# requires premium account>';
   const player = new Spotify.Player({
     name: 'UtilSuit Player',
     getOAuthToken: cb => { cb(token); }
