@@ -10,3 +10,5 @@ Completely open-source, however, some of the API keys that are connected to our 
 One issue we ran into is the lack of a constant api for what we require our mini-applications to do. The APIs expired between 1 hour and 1 month, creating an environment in which it became very difficult to test our app.
 
 Our main goal is to one day have a wide library of programs run out of UtilSuite-An all-in-one program that will be the portal for users to get what they need, when they need it.
+
+If you wish to see a live demo of this app, click [here](https://timna.me/UtilSuite/)
