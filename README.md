@@ -1,6 +1,7 @@
 # UtilSuite
 
 Credit goes to Conor Moschella, Timothy Na, and Ying Wang.
+Built with HTML, CSS, JavaScript, jQuery, and APIs (NYTimes, Giphy, Wikipedia, Spotify, and iexTrading).
 
 This is a program that's purpose is for it's utility. It holds some things that may assist a user in everyday life, whether it be leisure, or doing some research/study.
 
